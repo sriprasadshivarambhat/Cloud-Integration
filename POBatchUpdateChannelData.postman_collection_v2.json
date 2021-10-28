@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "f5fa15dd-544d-4776-963a-eebe615689f0",
+		"name": "POBatchUpdateChannelData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POBatchUpdateChannelData",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "<PASSWORD>",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "<SUSER>",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/mixed;boundary=batch_01869434-0005",
+						"type": "text"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "<CSRF_TOKEN>",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "--batch_01869434-0005\r\nContent-Type: multipart/mixed; boundary=changeset_01869434-0005-0001\r\n \r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('targetDir') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"targetDir\",\r\n\t\"ParameterValue\": \"/Demo/EXC\",\r\n\t\"DataType\": \"xsd:string\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('fileName') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"fileName\",\r\n\t\"ParameterValue\": \"ExpenseReport.xml\",\r\n\t\"DataType\": \"xsd:string\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('changeDirectoyStepWise') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"changeDirectoyStepWise\",\r\n\t\"ParameterValue\": \"1\",\r\n\t\"DataType\": \"xsd:boolean\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('address') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"address\",\r\n\t\"ParameterValue\": \"testintegration11.ftp.ondemand.com\",\r\n\t\"DataType\": \"xsd:string\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('createNewDirectoy') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"createNewDirectoy\",\r\n\t\"ParameterValue\": \"1\",\r\n\t\"DataType\": \"xsd:boolean\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('proxyType') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"proxyType\",\r\n\t\"ParameterValue\": \"none\",\r\n\t\"DataType\": \"xsd:string\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('reconnectDelay') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"reconnectDelay\",\r\n\t\"ParameterValue\": \"2000\",\r\n\t\"DataType\": \"xsd:integer\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('connectionRetry') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"connectionRetry\",\r\n\t\"ParameterValue\": \"3\",\r\n\t\"DataType\": \"xsd:integer\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('preventDirTraversal') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"preventDirTraversal\",\r\n\t\"ParameterValue\": \"1\",\r\n\t\"DataType\": \"xsd:boolean\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n \r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('timeOut') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"timeOut\",\r\n\t\"ParameterValue\": \"10000\",\r\n\t\"DataType\": \"xsd:integer\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n\r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('flattenFileName') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"flattenFileName\",\r\n\t\"ParameterValue\": \"0\",\r\n\t\"DataType\": \"xsd:boolean\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n\r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('useTempFile') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"useTempFile\",\r\n\t\"ParameterValue\": \"0\",\r\n\t\"DataType\": \"xsd:boolean\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n\r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('encryption') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"encryption\",\r\n\t\"ParameterValue\": \"ftpes\",\r\n\t\"DataType\": \"xsd:string\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n\r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('handleType') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"handleType\",\r\n\t\"ParameterValue\": \"Override\",\r\n\t\"DataType\": \"xsd:string\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n\r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('automaticallyDisconnect') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"automaticallyDisconnect\",\r\n\t\"ParameterValue\": \"0\",\r\n\t\"DataType\": \"xsd:boolean\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n\r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('addTimeStamp') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"addTimeStamp\",\r\n\t\"ParameterValue\": \"0\",\r\n\t\"DataType\": \"xsd:boolean\"\r\n}\r\n\r\n--changeset_01869434-0005-0001\r\nContent-Type: application/http\r\nContent-Transfer-Encoding: binary\r\n\r\nPUT IntegrationDesigntimeArtifacts(Id='ftp_copy',Version='1.0.7')/$links/Configurations('credentialName') HTTP/1.1\r\nContent-Type: application/json\r\n\r\n{\r\n\t\"ParameterKey\": \"credentialName\",\r\n\t\"ParameterValue\": \"SFTP1\",\r\n\t\"DataType\": \"xsd:string\"\r\n}\r\n\r\n--changeset_01869434-0005-0001--\r\n \r\n--batch_01869434-0005--",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://<TMN_URL>/api/v1/$batch",
+					"protocol": "https",
+					"host": [
+						"<TMN_URL>"
+					],
+					"path": [
+						"api",
+						"v1",
+						"$batch"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
